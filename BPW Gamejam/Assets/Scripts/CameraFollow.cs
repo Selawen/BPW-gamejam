@@ -27,9 +27,9 @@ public class CameraFollow : MonoBehaviour
         int activePlayer = activationScript.activePlayer;
         if (followedPlayer == activePlayer)
         {
-            if (Vector3.Distance(new Vector3(player.transform.position.x, 0, player.transform.position.z), new Vector3(transform.position.x, 0, transform.position.z - 10)) > 1)
+            if (Vector3.Distance(new Vector3(player.transform.position.x, 0, player.transform.position.z), new Vector3(transform.position.x, 0, transform.position.z - 15)) > 1)
             {
-                transform.position += (new Vector3(player.transform.position.x, 0, player.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z + 10)) * Time.deltaTime;
+                transform.position += (new Vector3(player.transform.position.x, 0, player.transform.position.z) - new Vector3(transform.position.x, 0, transform.position.z + 15)) * Time.deltaTime;
             }
         }
         else
